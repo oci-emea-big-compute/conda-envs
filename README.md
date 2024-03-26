@@ -33,10 +33,11 @@ Extracting ./data/cifar-10-python.tar.gz to ./data
 [1,    60] loss: 0.765
 [1,    80] loss: 0.671
 [2,    20] loss: 0.424
-... ```
+...
+```
 
 
-### vLLM
+### vLLM ###
 
 Login into Hugging Face HUB with
 ```huggingface-cli login```
