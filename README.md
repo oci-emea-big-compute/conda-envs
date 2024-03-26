@@ -38,4 +38,26 @@ Extracting ./data/cifar-10-python.tar.gz to ./data
 
 ### vLLM
 
-WIP
+Login into Hugging Face HUB with
+```huggingface-cli login```
+
+You can then start an Open AI compatible API running Llama2 on http://localhost:8000
+
+```python -m vllm.entrypoints.openai.api_server --model meta-llama/Llama-2-7b-chat-hf```
+
+It can be tested with Curl 
+
+```curl http://localhost:8000/v1/completions     -H "Content-Type: application/json"     -d '{
+        "model": "meta-llama/Llama-2-7b-chat-hf",
+        "prompt": "he following is a conversation with an AI research assistant. The assistant tone is technical and scientific. Human: Hello, who are you? AI: Greeting! I am an AI research assistant. How can I help you today? Human: Can you tell me about the creation of blackholes? AI",
+        "max_tokens": 30,
+        "temperature": 0
+    }'```
+
+
+Load test with Locust
+
+execute the following command in utilities folder
+```locust --host  httry utilitiesocalhost:8000```
+
+
