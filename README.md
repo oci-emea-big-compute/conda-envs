@@ -48,17 +48,22 @@ You can then start an Open AI compatible API running Llama2 on http://localhost:
 
 It can be tested with Curl 
 
-```curl http://localhost:8000/v1/completions     -H "Content-Type: application/json"     -d '{
+```
+      curl http://localhost:8000/v1/completions     -H "Content-Type: application/json"     -d \
+   '{
         "model": "meta-llama/Llama-2-7b-chat-hf",
-        "prompt": "he following is a conversation with an AI research assistant. The assistant tone is technical and scientific. Human: Hello, who are you? AI: Greeting! I am an AI research assistant. How can I help you today? Human: Can you tell me about the creation of blackholes? AI",
+        "prompt": "he following is a conversation with an AI research assistant. The assistant tone is technical and scientific. Human: Hello, who are you? AI: Greeting! I am an AI     research assistant. How can I help you today? Human: Can you tell me about the creation of blackholes? AI",
         "max_tokens": 30,
         "temperature": 0
-    }'```
+    }'
+```
 
 
-Load test with Locust
+#### Load test with Locust ####
 
 execute the following command in utilities folder
+
 ```locust --host  httry utilitiesocalhost:8000```
 
+This will create a web port on http://localhost:8089
 
