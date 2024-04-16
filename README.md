@@ -1,7 +1,10 @@
 # conda-envs
 A collection of ready to use conda environments
 
-The templates are divided per OS version, so they should be applied to the same OS.
+The templates are divided per OS version, so they should be applied to the same OS. 
+
+
+As a prerequisite, you have to install anaconda or miniconda in the OS. In ubuntu you have to install cuda-toolkit > 12.1 and nvidia driver. 
 
 To create an environment
 
